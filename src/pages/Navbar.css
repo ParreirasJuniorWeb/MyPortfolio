@@ -1,0 +1,202 @@
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10%;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar .links {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.navbar .links:hover,
+.navbar .links.active {
+    color: var(--main-color);
+}
+
+.menu-btn {
+    font-size: 3.6em;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+    position: relative;
+}
+
+/* ANIMATION RELOAD AND SCROLL */
+
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+}
+
+section:nth-child(odd) .animate {
+    background: var(--second-bg-color);
+}
+
+.education .education-box .animate {
+    width: 110%;
+}
+
+.contact.show-animate .animate~.contact form {
+    box-shadow: none;
+}
+
+.animate.home-img {
+  width: 50%;
+}
+
+.logo .animate,
+.navbar .animate,
+.menu-btn .animate,
+.home.show-animate .animate,
+.about.show-animate .animate,
+.education.show-animate .animate,
+.skills.show-animate .animate,
+.contact.show-animate .animate,
+.footer .animate {
+    animation: showRight 1s ease forwards;
+}
+
+#animate_logo_timer, .animate_aboutHeading_timer {
+    animation-delay: calc(0.3s * 1);
+}
+
+.animate_navLinks_timer, .animate_aboutImg_timer {
+    animation-delay: calc(0.3s * 2);
+}
+
+#animate_name_timer {
+    animation-delay: calc(0.3s * 2);
+}
+
+#animate_text_timer, .animate_aboutTitle_timer {
+    animation-delay: calc(0.3s * 3);
+}
+
+#animate_paragrafo_timer, .animate_aboutText_timer {
+    animation-delay: calc(0.3s * 4);
+}
+
+#animate_btns_timer {
+    animation-delay: calc(0.3s * 5);
+}
+
+#animate_social_btns_timer {
+    animation-delay: calc(0.3s * 6);
+}
+
+.animate_homeImg_timer {
+    animation-delay: calc(0.3s * 7);
+}
+
+.footer .animate {
+    animation-delay: calc(0.3s * 10);
+}
+
+/* BreakPoints */
+
+@media(max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        padding: 2rem 5%;
+    }
+
+    .navbar .links {
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+
+    section {
+        padding: 10rem 5% 2rem;
+    }
+
+    .home {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        background: var(--bg-color);
+        display: inline-flex;
+        justify-content: space-between;
+    }
+
+    .menu-btn {
+        display: block;
+        position: relative;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        padding: 1rem 5%;
+        background: var(--bg-color);
+        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.2);
+        display: none;
+        transition: .25s ease-in;
+        transition-delay: .25s;
+        
+        border-left: .2rem solid var(--main-color);
+        border-right: .2rem solid var(--main-color);
+        padding-left: 2rem;
+    }
+
+    .navbar .links {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        border-left: .2rem solid var(--main-color);
+        padding-left: 2rem;
+    }
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
