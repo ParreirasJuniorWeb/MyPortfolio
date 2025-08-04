@@ -1,6 +1,6 @@
 import "./About.css";
 
-import foto_about from "../img/20230723_024034722_iOS-removebg-preview (2).png";
+import foto_about from "../img/Foto_profissional_portfolio_react-removebg-preview.png";
 
 const About = () => {
   return (
