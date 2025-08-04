@@ -7,7 +7,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
-import foto_home from "../img/20230723_024034722_iOS-removebg-preview (2).png";
+import foto_home from "../img/Foto_profissional_portfolio_react-removebg-preview.png";
 
 import { ThreeCircles } from "react-loader-spinner";
 import { useEffect, useState } from "react";
