@@ -1,6 +1,6 @@
 import "./About.css";
 
-import foto_about from "../img/Foto_profissional_portfolio_react-removebg-preview.png";
+import foto_about from "../img/foto_perfil_portfolio_1-removebg-preview";
 
 const About = () => {
   return (
